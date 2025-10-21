@@ -1,0 +1,60 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor / OS files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*    # si usas variantes .env.local etc.
+*.key
+*.pem
+*.p12
+*.json   # evita subir credenciales de servicio; si hay .json que NO son secretos puedes excluirlos manualmente
+
+# Databases / outputs / logs
+facturas.db
+*.sqlite
+*.sqlite3
+llm_usage.csv
+*.log
+logs/
+
+# Large data / raw files (opcional)
+# Ignora PDFs grandes de facturas si no quieres subir datos sensibles.
+facturas/*.pdf
+data/
+raw_data/
+
+# Generated / caches
+*.cache
+*.tmp
+*.out
+
+# Misc
+coverage.xml
