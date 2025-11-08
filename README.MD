@@ -1,5 +1,5 @@
 # ETL Facturas (Gemini + COP)
-
+Juanjo te amo
 Este mini-proyecto procesa facturas en PDF usando Gemini (Google) para extraer campos en CSV, los convierte a DataFrame, transforma importes a COP y persiste en SQLite.
 
 ## Requisitos
