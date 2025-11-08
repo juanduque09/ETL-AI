@@ -8,7 +8,7 @@ Este mini-proyecto procesa facturas en PDF usando Gemini (Google) para extraer c
 - Google API Key para Gemini
 - Permisos de escritura en la carpeta del proyecto
 
-## Instalación rápida
+## Instalación rápida.
 
 ### Con venv (recomendado)
 ```bash
