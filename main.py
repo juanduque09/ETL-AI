@@ -4,6 +4,7 @@ import os
 import argparse
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+import generar_reporte
 
 # Cargar variables de entorno
 load_dotenv(".env")
@@ -153,6 +154,22 @@ def main():
     # Mostrar muestra de los datos guardados
     print("\n📋 Muestra de datos guardados:")
     print(df.head().to_string())
+
+    # Generar reportes visuales
+    print("\n📊 Generando reportes visuales...")
+    try:
+        reporte1 = generar_reporte.generar_reporte_visual(df, "reporte_facturas.png")
+        reporte2 = generar_reporte.generar_reporte_compacto(df, "reporte_compacto.png")
+        
+        if reporte1 and reporte2:
+            print("✨ Reportes visuales generados exitosamente")
+        elif reporte1 or reporte2:
+            print("✅ Se generó al menos un reporte visual")
+        else:
+            print("⚠️  No se pudieron generar los reportes (verifica los datos)")
+    except Exception as e:
+        print(f"⚠️  Error generando reportes visuales: {str(e)}")
+        print("   Tip: Asegúrate de que las facturas se procesaron correctamente")
 
 if __name__ == "__main__":
     main()
